@@ -31,7 +31,8 @@ The objects sent to the web api looks like this. Both devices and values are sen
 
 ### Device endpoint
 
-````{
+```
+{
     id: string;
     name: string;
     zone: string;
@@ -44,13 +45,16 @@ The objects sent to the web api looks like this. Both devices and values are sen
         lastUpdated: Date | string;
         isActivatedForSync?: boolean;
     }[]
-}[]```
+}[]
+```
 
 ### Values endpoint
-```{
+
+```
+{
     value: number;
     timestamp: Date | string;
     deviceId: string;
     capabilityId: string;
-}[]```
-````
+}[]
+```
