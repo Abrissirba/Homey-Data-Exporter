@@ -188,6 +188,7 @@ class MyApp extends App {
             };
             // this.storageService.addValue(deviceCapabilityValue);
             this.uploadValueService.uploadValues([deviceCapabilityValue]).catch((err) => {
+                this.error('Could not upload value', deviceCapabilityValue, err);
                 this.storageService.addValue(deviceCapabilityValue);
             });
         }

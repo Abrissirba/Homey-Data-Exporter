@@ -79,14 +79,14 @@ export class SettingsApp extends LitElement {
             }
         });
         this.deviceCapabilitiesToSync = deviceCapabilitiesToSync;
+        this.homey.set('connection', this.connection);
+        this.homey.set('deviceCapabilitiesToSync', this.deviceCapabilitiesToSync);
+
         try {
             const response = await this.uploadService.uploadDevices(deviceCapabilitiesToSync);
         } catch (err) {
             this.homey.alert('Could not upload device capabilities ' + JSON.stringify(err), 'error');
         }
-
-        this.homey.set('connection', this.connection);
-        this.homey.set('deviceCapabilitiesToSync', this.deviceCapabilitiesToSync);
     }
 
     render() {

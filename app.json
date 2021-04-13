@@ -5,7 +5,7 @@
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
-    "en": "DataExport"
+    "en": "Data Export"
   },
   "description": {
     "en": "Exports data to sql server"
